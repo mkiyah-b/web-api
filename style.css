@@ -1,0 +1,72 @@
+html {
+    background-color: rgb(191, 185, 167);
+}
+
+#tv {
+    position: absolute;
+    height: 600px;
+    right: 1px;
+    bottom: 10px;
+}
+#topTV{
+    position: absolute;
+    right: 190px;
+    bottom: 290px;
+    rotate: 2deg;
+}
+#bottomTV{
+    position: absolute;
+    right: 190px;
+    bottom: 75px;
+}
+#topButton {
+    position: absolute;
+    height: 25px;
+    right: 128px;
+    bottom: 217px;
+}
+#bottomButton {
+    position: absolute;
+    height: 35px;
+    right: 128px;
+    bottom: 172px;
+}
+#posters {
+    position: absolute;
+    left: 20px;
+}
+#posters img:nth-child(1) {
+    position: absolute;
+    top: 70px;
+}
+#posters img:nth-child(2) {
+    position: absolute;
+    top: 20px;
+    left: 115px;
+}
+#posters img:nth-child(3) {
+    position: absolute;
+    top: 20px;
+    left: 330px;
+}
+#posters img:nth-child(4) {
+    position: absolute;
+    top: 150px;
+    left: 350px;
+}
+#posters img:nth-child(5) {
+    position: absolute;
+    top: 150px;
+    left: 420px;
+}
+#floor {
+    background-color: rgb(55, 62, 45);
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    bottom: 0px;
+    left: 0px;
+}
+
+
+/* retro tv, kentucky snow globe */
