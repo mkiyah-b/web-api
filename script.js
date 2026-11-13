@@ -35,13 +35,13 @@ document.addEventListener("mousemove", function (e) {
     }
     if (topDrag) {
       topKnob.style.transform = 'rotate(' + data + 'deg';
-      if (data % 20 === 0) {
+      if (data % 15 === 0) {
         getVideo(topTV);
       }
     }
     else if (bottomDrag) {
       bottomKnob.style.transform = 'rotate(' + data + 'deg';
-      if (data % 20 === 0) {
+      if (data % 15 === 0) {
         getVideo(bottomTV);
       }
     }
