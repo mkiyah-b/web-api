@@ -2,10 +2,10 @@ let topKnob = document.querySelector('#topButton');
 let bottomKnob = document.querySelector('#bottomButton');
 let topDrag = false;
 let bottomDrag = false;
-let lampButton = document.querySelector('#lampButton');
-let lampLava = document.querySelectorAll('.lampLava');
-let lampCont = document.querySelector('.middleLamp');
-let lampOn = false;
+// let lampButton = document.querySelector('#lampButton');
+// let lampLava = document.querySelectorAll('.lampLava');
+// let lampCont = document.querySelector('.middleLamp');
+// let lampOn = false;
 let colors = [];
 let topTV = document.querySelector('#topTV');
 let bottomTV = document.querySelector('#bottomTV');
@@ -115,44 +115,44 @@ async function getRandomPainting(paintingNum) {
 
 ///LAMPS
 // toggle lamp
-lampButton.addEventListener("click", function(e) {
-  lampOn = !lampOn;
-  if (lampOn) {
-    getLampColor();
-    console.log('Im On');
-  }
-  else {
-    lampCont.style.backgroundColor = "rgb(155, 155, 155)";
-    lampLava.forEach(lava => {
-      lava.style.backgroundColor = "rgb(155, 155, 155)";
-    })
-    console.log('Im Off');
-  }
-})
-//// getLampColor -- change the lava
-/// uses colormind web api (plus method and headers in fetch)
-async function getLampColor() {
-  const url = 'http://colormind.io/api/';
-  try {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: "{\"model\":\"default\"}",
-    });
+// lampButton.addEventListener("click", function(e) {
+//   lampOn = !lampOn;
+//   if (lampOn) {
+//     getLampColor();
+//     console.log('Im On');
+//   }
+//   else {
+//     lampCont.style.backgroundColor = "rgb(155, 155, 155)";
+//     lampLava.forEach(lava => {
+//       lava.style.backgroundColor = "rgb(155, 155, 155)";
+//     })
+//     console.log('Im Off');
+//   }
+// })
+// //// getLampColor -- change the lava
+// /// uses colormind web api (plus method and headers in fetch)
+// async function getLampColor() {
+//   const url = 'http://colormind.io/api/';
+//   try {
+//     const response = await fetch(url, {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/x-www-form-urlencoded",
+//       },
+//       body: "{\"model\":\"default\"}",
+//     });
 
-    const data = await response.json();
-    for (let i = 0; i < 3; i++) {
-      colors[i] = data.result[Math.floor(Math.random() * 5)];
-    }
-    if (colors.length != 0) {
-      lampCont.style.backgroundColor = "rgb(" + colors[0][0] + "," + colors[0][1] + "," + colors[0][2] + ")";
-      lampLava[0].style.backgroundColor = "rgb(" + colors[1][0] + "," + colors[1][1] + "," + colors[1][2] + ")";
-      lampLava[1].style.backgroundColor = "rgb(" + colors[2][0] + "," + colors[2][1] + "," + colors[2][2] + ")";
-    }
-  } catch (error) {
-    console.error(error.message);
-  }  
-}
+//     const data = await response.json();
+//     for (let i = 0; i < 3; i++) {
+//       colors[i] = data.result[Math.floor(Math.random() * 5)];
+//     }
+//     if (colors.length != 0) {
+//       lampCont.style.backgroundColor = "rgb(" + colors[0][0] + "," + colors[0][1] + "," + colors[0][2] + ")";
+//       lampLava[0].style.backgroundColor = "rgb(" + colors[1][0] + "," + colors[1][1] + "," + colors[1][2] + ")";
+//       lampLava[1].style.backgroundColor = "rgb(" + colors[2][0] + "," + colors[2][1] + "," + colors[2][2] + ")";
+//     }
+//   } catch (error) {
+//     console.error(error.message);
+//   }  
+// }
 
