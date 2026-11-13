@@ -1,63 +1,79 @@
 html {
     background-color: rgb(191, 185, 167);
+    background-image: url('wallpaper2.jpg');
+    overflow: hidden;
 }
-
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 #tv {
     position: absolute;
     height: 600px;
-    right: 1px;
+    right: 94px;
     bottom: 10px;
 }
 #topTV{
     position: absolute;
     right: 190px;
-    bottom: 290px;
+    bottom: 295px;
     rotate: 2deg;
+    background-color: black;
 }
 #bottomTV{
     position: absolute;
-    right: 190px;
+    right: 191px;
     bottom: 75px;
+    background-color: black;
 }
 #topButton {
     position: absolute;
     height: 25px;
     right: 128px;
-    bottom: 217px;
+    bottom: 220px;
+
 }
 #bottomButton {
     position: absolute;
     height: 35px;
-    right: 128px;
-    bottom: 172px;
+    right: 126px;
+    bottom: 175px;
 }
 #posters {
     position: absolute;
-    left: 20px;
+    left: 50px;
 }
 #posters img:nth-child(1) {
     position: absolute;
     top: 70px;
+    object-fit: cover;
 }
 #posters img:nth-child(2) {
     position: absolute;
     top: 20px;
-    left: 115px;
+    left: 125px;
+    object-fit: cover;
 }
 #posters img:nth-child(3) {
     position: absolute;
-    top: 20px;
-    left: 330px;
+    top: 120px;
+    left: 380px;
+    object-fit: cover;
 }
 #posters img:nth-child(4) {
     position: absolute;
-    top: 150px;
-    left: 350px;
+    top: 260px;
+    left: 390px;
+    object-fit: cover;
 }
 #posters img:nth-child(5) {
     position: absolute;
-    top: 150px;
-    left: 420px;
+    top: 280px;
+    left: 470px;
+    object-fit: cover;
 }
 #floor {
     background-color: rgb(55, 62, 45);
@@ -67,6 +83,261 @@ html {
     bottom: 0px;
     left: 0px;
 }
+#sunlight {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background-color: rgba(255, 185, 55, 0.322);
+    height: 100vh;
+    width: 85vw;
+    clip-path: polygon(0 0, 0 20vh, 55vw 100vh, 85vw 100vh, 85vw 50vh, 5vw 0);
+    filter: blur(50vh);
+}
+#atmosphere {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(200, 77, 0, 0.1);
+}
+#backCorner {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    height: 100vh;
+    width: 12vw;
+    background-color: rgba(43, 52, 5, 0.305);
+    clip-path: polygon(0 0, 0 90vh, 12vw 100vh, 12vw 0)
+}
+#shadows i:nth-child(1) {
+    position: absolute;
+    bottom: 4vh;
+    right: 110px;
+    width: 300px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.925);
+    filter: blur(10px);
+}
+#shadows i:nth-child(2) {
+    position: absolute;
+    bottom: 4vh;
+    right: 1px;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.575);
+    filter: blur(10px);
+    border-radius: 50px;
+}
 
+#tvLight {
+    position: absolute;
+    bottom: 0px;
+    right: 180px;
+    width: 300px;
+    height: 20px;
+    background-color: rgba(245, 245, 245, 0.511);
+    clip-path: polygon(60px 0, 0 20px, 250px 20px, 270px 10px);
+    border-radius: 5px;
+    filter: blur(20px);
+}
+
+.painting {
+    background-color: rgb(87, 39, 4);
+    padding: 7px;
+    border-radius: 1px;
+}
+
+#shelf1, #shelf2, #shelf3 {
+    position: absolute;
+}
+#shelf1 i:nth-child(1){
+    position: absolute;
+    top: 47.5vh;
+    left: 62px;
+    height: 20px;
+    width: 270px;
+    background-color: rgba(37, 32, 26, 0.489);
+    border-radius: 1px;
+    clip-path: polygon(0 0, 20px 20px, 268px 20px, 248px 0);
+    filter: blur(15px);
+}
+#shelf1 i:nth-child(2){
+    position: absolute;
+    top: 45vh;
+    left: 60px;
+    height: 20px;
+    width: 250px;
+    background-color: rgb(143, 94, 31);
+    border-radius: 5px;
+}
+
+#shelf2 i:nth-child(1){
+    position: absolute;
+    top: 62.5vh;
+    left: 167px;
+    height: 20px;
+    width: 270px;
+    background-color: rgba(37, 32, 26, 0.489);
+    border-radius: 1px;
+    clip-path: polygon(0 0, 20px 20px, 268px 20px, 248px 0);
+    filter: blur(15px);
+}
+#shelf2 i:nth-child(2){
+    position: absolute;
+    top: 60vh;
+    left: 165px;
+    height: 20px;
+    width: 250px;
+    background-color: rgb(143, 94, 31);
+    border-radius: 5px;
+}
+
+#books {
+    position: absolute;
+    top: 53vh;
+    left: 180px;
+}
+
+#plantPot {
+    position: absolute;
+    top: 34vh;
+    left: 90px;
+}
+
+#lavaLamp {
+    position: absolute;
+    left: -130px;
+    bottom: 0px;
+}
+#lavaLamp i:nth-child(4) {
+    position: absolute;
+    bottom: 55px;
+    left: 220px;
+    width: 50px;
+    height: 30px;
+    background-color: gainsboro;
+    clip-path: polygon(15px 0, 35px 0, 50px 30px, 0 30px);
+}
+#lavaLamp i:nth-child(5) {
+    position: absolute;
+    bottom: 85px;
+    left: 215px;
+    width: 60px;
+    height: 30px;
+    background-color: gainsboro;
+    clip-path: polygon(0 0, 20px 30px, 40px 30px, 60px 0);
+}
+#lavaLamp i:nth-child(6) {
+    position: absolute;
+    bottom: 215px;
+    left: 220px;
+    width: 50px;
+    height: 30px;
+    background-color: gainsboro;
+    clip-path: polygon(15px 0, 35px 0, 45px 30px, 5px 30px);
+}
+
+#lavaLamp i:nth-child(1) {
+    position: absolute;
+    bottom: 115px;
+    left: 205px;
+    width: 80px;
+    height: 110px;
+    background-color: rgb(155, 155, 155);
+    clip-path: polygon(0 90px, 10px 110px, 70px 110px, 80px 90px, 55px 0, 25px 0);
+}
+
+#lavaLamp i:nth-child(2) {
+    position: absolute;
+    bottom: 115px;
+    left: 215px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(155, 155, 155);
+    border-radius: 100%;
+}
+#lavaLamp i:nth-child(3) {
+    position: absolute;
+    bottom: 155px;
+    left: 245px;
+    width: 15px;
+    height: 15px;
+    background-color: rgb(155, 155, 155);
+    border-radius: 100%;
+}
+#lampButton {
+    position: absolute;
+    bottom: 90px;
+    left: 240px;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(98, 98, 98);
+    border-radius: 100%;
+}
+
+#string {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 300px;
+}
+#fairyLights i:nth-child(2){
+    position: absolute;
+    top: 7px;
+    right: 290px;
+    height: 20px;
+    width: 15px;
+    border-radius: 100%;
+    rotate: 25deg;
+}
+#fairyLights i:nth-child(3){
+    position: absolute;
+    top: 40px;
+    right: 245px;
+    height: 20px;
+    width: 15px;
+    border-radius: 100%;
+    rotate: 25deg;
+}
+#fairyLights i:nth-child(4){
+    position: absolute;
+    top: 67px;
+    right: 200px;
+    height: 20px;
+    width: 15px;
+    border-radius: 100%;
+    rotate: 20deg;
+}
+#fairyLights i:nth-child(5){
+    position: absolute;
+    top: 92px;
+    right: 150px;
+    height: 20px;
+    width: 15px;
+    border-radius: 100%;
+    rotate: 15deg;
+}
+#fairyLights i:nth-child(6){
+    position: absolute;
+    top: 113px;
+    right: 90px;
+    height: 20px;
+    width: 15px;
+    border-radius: 100%;
+    rotate: 10deg;
+}
+#fairyLights i:nth-child(7){
+    position: absolute;
+    top: 123px;
+    right: 25px;
+    height: 20px;
+    width: 15px;
+    border-radius: 100%;
+    rotate: 5deg;
+}
+.light {
+    background: radial-gradient(rgba(203, 181, 11, 0.868), rgba(255, 236, 179, 0.803))
+}
 
 /* retro tv, kentucky snow globe */

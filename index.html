@@ -4,23 +4,70 @@
         <title>Web API</title>
         <link href="style.css" rel="stylesheet">
     </head>
-    <script src="script.js"></script>
     <body>
-        <div id="posters">
-            <img id="p1" src="https://placehold.co/100x150" height="150px" width="100px">
-            <img id="p2" src="https://placehold.co/200x250" height="250px" width="200px">
-            <img id="p3" src="https://placehold.co/170x120" height="120px" width="170px">
-            <img id="p4" src="https://placehold.co/60x100" height="100px" width="60px">
-            <img id="p5" src="https://placehold.co/60x100" height="100px" width="60px">
-        </div>
+        <div id="atmosphere"></div>
+        <div id="sunlight"></div>
         <div id="floor"></div>
-        <div id="tvs">
-            <img id="topTV" src="https://placehold.co/190x170" height="170px" width="190px">
-            <img id="bottomTV" src="https://placehold.co/230x180" height="180px" width="230px">
+        <div id="tvLight"></div>
+        <div id="backCorner"></div>
+        <div id="posters">
+            <img id="p1" class="painting" height="150px" width="100px" onclick="getRandomPainting(p1)">
+            <img id="p2" class="painting" height="250px" width="200px" onclick="getRandomPainting(p2)">
+            <img id="p3" class="painting" height="120px" width="170px" onclick="getRandomPainting(p3)">
+            <img id="p4" class="painting" height="100px" width="60px" onclick="getRandomPainting(p4)">
+            <img id="p5" class="painting" height="100px" width="60px" onclick="getRandomPainting(p5)">
+        </div>
 
+        <div id="shelf1">
+            <i></i>
+            <i></i>
+        </div>
+        <div id="shelf2">
+            <i></i>
+            <i></i>
+        </div>
+        <div id="shelf3">
+            <i></i>
+            <i></i>
+        </div>
+
+        <img id="books" src="books.png">
+        <img id="plantPot" src="pottedPlant.png">
+
+        <div id="fairyLights">
+            <img id="string" src="stringLight.png">
+            <i class="light"></i>
+            <i class="light"></i>
+            <i class="light"></i>
+            <i class="light"></i>
+            <i class="light"></i>
+            <i class="light"></i>
+        </div>
+
+        <div id="lavaLamp">
+            <i class="middleLamp"></i>  
+            <i class="lampLava"></i>
+            <i class="lampLava"></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i id="lampButton"></i>
+        </div>
+        <div id="tvs">
+            <div id="shadows">
+                <i></i>
+                <i></i>
+            </div>
+             <video id="topTV" width="190px" height="170px" autoplay>
+                <source src="" type="video/mp4">
+             </video>
+             <video id="bottomTV" width="230px" height="185px" autoplay>
+                <source src="" type="video/mp4">
+             </video>
             <img id="tv" src="tvs.png">
             <img id="topButton" src="High Knob.png">
             <img id="bottomButton" src="Low Knob.png">
         </div>
     </body>
+    <script src="script.js"></script>
 </html>
