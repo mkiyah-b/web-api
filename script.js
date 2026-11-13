@@ -35,13 +35,13 @@ document.addEventListener("mousemove", function (e) {
     }
     if (topDrag) {
       topKnob.style.transform = 'rotate(' + data + 'deg';
-      if (data % 15 === 0) {
+      if (data % 10 === 0) {
         getVideo(topTV);
       }
     }
     else if (bottomDrag) {
       bottomKnob.style.transform = 'rotate(' + data + 'deg';
-      if (data % 15 === 0) {
+      if (data % 10 === 0) {
         getVideo(bottomTV);
       }
     }
@@ -50,11 +50,11 @@ document.addEventListener("mousemove", function (e) {
 //// getVideo -- get a video and change the corresponding tv
 /// uses nasa web api
 async function getVideo(tvSrc) {
-  const nasa = "https://images-api.nasa.gov/search?q=stars&media_type=video&page_size=1&page=" + (Math.floor(Math.random() * 100) + 1);
+  const nasa = "https://images-api.nasa.gov/search?q=stars&media_type=video&page_size=1&page=" + (Math.floor(Math.random() * 250) + 1);
   try {
     const getit = await fetch(nasa);
     if (!getit.ok) {
-      console.log(nasa);
+      // console.log(nasa);
       throw new Error(`Response status: ${getit.status}`);
     }
     const theVidJson = await getit.json();
@@ -66,7 +66,7 @@ async function getVideo(tvSrc) {
         throw new Error(`Response status: ${response.status}`);
       }
       const videoURL = await response.json();
-      console.log(videoURL[0]);
+      // console.log(videoURL[0]);
       // return videoURL[0];
       tvSrc.src = videoURL[0];
     } catch (e) {
@@ -87,7 +87,7 @@ async function getRandomPainting(paintingNum) {
   try {
     const response = await fetch(deps);
     if (!response.ok) {
-      console.log(deps)
+      // console.log(deps)
       throw new Error(`Response status: ${response.status}`);
     }
     const result = await response.json();
@@ -96,7 +96,7 @@ async function getRandomPainting(paintingNum) {
     try {
       const responseNext = await fetch(url);
       if (!responseNext.ok) {
-        console.log(url)
+        // console.log(url)
         throw new Error(`Response status: ${responseNext.status}`);
       }
       const data = await responseNext.json();
