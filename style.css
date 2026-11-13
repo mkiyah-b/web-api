@@ -148,7 +148,7 @@ img {
     border-radius: 1px;
 }
 
-#shelf1, #shelf2, #shelf3 {
+#shelf1, #shelf2 {
     position: absolute;
 }
 #shelf1 i:nth-child(1){
